@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI Smart College Assistant - a student support chatbot mini project.">
+  <title>AI Smart College Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">🎓</div>
+      <div>
+        <p class="eyebrow">STUDENT SUPPORT</p>
+        <h1>AI Smart College Assistant</h1>
+      </div>
+      <span class="status"><i></i> Online</span>
+    </header>
+
+    <section class="intro">
+      <div>
+        <p class="eyebrow">YOUR CAMPUS HELPER</p>
+        <h2>How can I help you today?</h2>
+        <p>Ask a question about student life, exams, admissions, fees, or library services.</p>
+      </div>
+      <div class="intro-art" aria-hidden="true">✦</div>
+    </section>
+
+    <section class="chat-card" aria-label="Chat with assistant">
+      <div class="chat-heading">
+        <div class="avatar">🎓</div>
+        <div><strong>College Assistant</strong><small>Usually replies instantly</small></div>
+        <button id="clearBtn" class="clear-btn" type="button">Clear chat</button>
+      </div>
+      <div id="chatMessages" class="messages" aria-live="polite">
+        <div class="message bot">
+          <div class="bubble">Hi there! 👋 I'm your Smart College Assistant. Ask me anything about general college and student services.</div>
+          <span class="time">Assistant</span>
+        </div>
+      </div>
+      <div class="suggestions">
+        <button type="button" data-prompt="How can I get admission information?">Admissions</button>
+        <button type="button" data-prompt="How can I check exam dates?">Exam dates</button>
+        <button type="button" data-prompt="Tell me about library services">Library</button>
+        <button type="button" data-prompt="How do I get fee information?">Fee information</button>
+      </div>
+      <form id="chatForm" class="composer">
+        <label class="sr-only" for="messageInput">Type your question</label>
+        <input id="messageInput" type="text" maxlength="1500" placeholder="Type your question here..." autocomplete="off" required>
+        <button id="sendBtn" type="submit" aria-label="Send message">Send <span>➤</span></button>
+      </form>
+      <p class="disclaimer">For official fees, dates, and policies, always verify information with your college.</p>
+    </section>
+    <footer>AI Smart College Assistant <span>·</span> Student Mini Project</footer>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

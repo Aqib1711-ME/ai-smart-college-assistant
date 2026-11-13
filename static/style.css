@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+:root{font-family:'DM Sans',sans-serif;color:#17243b;background:#f3f6fb;font-synthesis:none}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 10%,#e1eaff 0,transparent 30%),#f5f7fb}
+.app-shell{width:min(900px,calc(100% - 32px));margin:34px auto 22px}
+.topbar{display:flex;align-items:center;gap:14px;padding:8px 4px 26px}
+.brand-mark{width:48px;height:48px;border-radius:15px;background:#203f82;color:white;display:grid;place-items:center;font-size:23px;box-shadow:0 8px 20px #203f8230}
+.eyebrow{font-size:10px;letter-spacing:1.7px;font-weight:700;color:#6680ad;margin:0 0 5px}
+h1{font:800 19px Manrope,sans-serif;margin:0;letter-spacing:-.5px}
+.status{margin-left:auto;color:#39866a;font-size:12px;font-weight:700;background:#e6f5ed;padding:8px 12px;border-radius:30px}
+.status i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#39aa77;margin-right:6px}
+.intro{background:linear-gradient(120deg,#18366f,#315eaa);color:white;border-radius:22px;padding:30px 34px;display:flex;justify-content:space-between;align-items:center;overflow:hidden;box-shadow:0 16px 35px #1e3c7825}
+.intro .eyebrow{color:#b8cdf5}
+.intro h2{font:800 clamp(23px,4vw,32px) Manrope,sans-serif;margin:0 0 8px;letter-spacing:-1px}
+.intro p:last-child{color:#d9e5ff;margin:0;font-size:14px;line-height:1.6;max-width:560px}
+.intro-art{font-size:100px;color:#ffffff20;transform:rotate(12deg);margin-right:20px}
+.chat-card{background:white;border:1px solid #e8edf5;border-radius:22px;margin-top:22px;box-shadow:0 12px 35px #243b6410;overflow:hidden}
+.chat-heading{height:76px;padding:0 22px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #edf0f5}
+.avatar{width:40px;height:40px;border-radius:13px;background:#edf3ff;display:grid;place-items:center;font-size:19px}
+.chat-heading strong{display:block;font-size:14px}
+.chat-heading small{display:block;color:#8995a9;font-size:11px;margin-top:3px}
+.clear-btn{margin-left:auto;border:0;background:transparent;color:#7c8ba3;font:600 12px 'DM Sans';cursor:pointer}
+.messages{height:350px;overflow-y:auto;padding:22px;display:flex;flex-direction:column;gap:14px;background:#fcfdff}
+.message{max-width:78%;display:flex;flex-direction:column;gap:5px}
+.message.user{align-self:flex-end;align-items:flex-end}
+.bubble{padding:12px 15px;border-radius:15px 15px 15px 4px;background:#eef3fb;color:#263650;font-size:13px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}
+.user .bubble{background:#28519a;color:white;border-radius:15px 15px 4px 15px}
+.time{font-size:10px;color:#9aa5b5;padding:0 4px}
+.suggestions{display:flex;gap:8px;flex-wrap:wrap;padding:14px 20px 4px}
+.suggestions button{border:1px solid #dce5f4;background:white;color:#45618e;border-radius:30px;padding:8px 12px;font:600 11px 'DM Sans';cursor:pointer}
+.suggestions button:hover{background:#eff4ff}
+.composer{display:flex;gap:10px;padding:14px 20px 10px}
+.composer input{flex:1;min-width:0;border:1px solid #e0e6ef;border-radius:12px;padding:14px 15px;font:13px 'DM Sans';outline:none}
+.composer input:focus{border-color:#7295d1;box-shadow:0 0 0 3px #7295d120}
+.composer button{border:0;border-radius:12px;background:#244b91;color:white;padding:0 19px;font:700 12px 'DM Sans';cursor:pointer}
+.composer button:disabled{opacity:.6;cursor:wait}
+.composer button span{margin-left:7px}
+.disclaimer{text-align:center;color:#9aa5b5;font-size:10px;margin:4px 12px 17px}
+footer{text-align:center;color:#9ba6b7;font-size:11px;padding:20px}
+footer span{padding:0 6px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:600px){.app-shell{margin-top:16px}.intro{padding:25px 22px}.intro-art{font-size:65px;margin-right:0}.messages{height:390px;padding:16px}.message{max-width:90%}.chat-heading{padding:0 16px}.suggestions{padding-left:14px}.composer{padding:12px 14px}.composer button{padding:0 13px}}
